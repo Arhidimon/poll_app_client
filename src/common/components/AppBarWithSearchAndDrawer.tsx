@@ -299,9 +299,6 @@ class AppBarWithSearchAndDrawer extends React.Component<
         ]}
       </Menu>
     );
-
-    console.log(this.context.user);
-
     return (
       <Box
         sx={{
@@ -362,81 +359,84 @@ class AppBarWithSearchAndDrawer extends React.Component<
                 },
               }}
             >
-              {!this.context.user && [
-                <Button
-                  variant="contained"
-                  disableElevation
-                  onClick={() => {
-                    this.handleSignUp();
-                  }}
-                >
-                  <Typography
-                    variant="h6"
-                    noWrap
-                    component="div"
-                    sx={{
-                      display: {
-                        xs: 'none',
-                        sm: 'block',
-                      },
+              {this.context.user ? (
+                <>
+                  <IconButton
+                    size="large"
+                    aria-label="show 4 new mails"
+                    color="inherit"
+                  >
+                    <Badge badgeContent={4} color="error">
+                      <MailIcon />
+                    </Badge>
+                  </IconButton>
+                  <IconButton
+                    size="large"
+                    aria-label="show 17 new notifications"
+                    color="inherit"
+                  >
+                    <Badge badgeContent={17} color="error">
+                      <NotificationsIcon />
+                    </Badge>
+                  </IconButton>
+                  <IconButton
+                    size="large"
+                    edge="end"
+                    aria-label="account of current user"
+                    aria-controls={menuId}
+                    aria-haspopup="true"
+                    onClick={this.handleProfileMenuOpen}
+                    color="inherit"
+                  >
+                    <AccountCircle />
+                  </IconButton>
+                </>
+              ) : (
+                <>
+                  <Button
+                    variant="contained"
+                    disableElevation
+                    onClick={() => {
+                      this.handleSignUp();
                     }}
                   >
-                    Sign Up
-                  </Typography>
-                </Button>,
-                <Button
-                  variant="contained"
-                  disableElevation
-                  onClick={() => {
-                    this.handleSignIn();
-                  }}
-                >
-                  <Typography
-                    variant="h6"
-                    noWrap
-                    component="div"
-                    sx={{
-                      display: {
-                        xs: 'none',
-                        sm: 'block',
-                      },
+                    <Typography
+                      variant="h6"
+                      noWrap
+                      component="div"
+                      sx={{
+                        display: {
+                          xs: 'none',
+                          sm: 'block',
+                        },
+                      }}
+                    >
+                      Sign Up
+                    </Typography>
+                  </Button>
+                  <Button
+                    variant="contained"
+                    disableElevation
+                    onClick={() => {
+                      this.handleSignIn();
                     }}
                   >
-                    Sign In
-                  </Typography>
-                </Button>,
-              ]}
-              {this.context.user && [
-                <IconButton
-                  size="large"
-                  aria-label="show 4 new mails"
-                  color="inherit"
-                >
-                  <Badge badgeContent={4} color="error">
-                    <MailIcon />
-                  </Badge>
-                </IconButton>,
-                <IconButton
-                  size="large"
-                  aria-label="show 17 new notifications"
-                  color="inherit"
-                >
-                  <Badge badgeContent={17} color="error">
-                    <NotificationsIcon />
-                  </Badge>
-                </IconButton>,
-                <IconButton
-                  size="large"
-                  edge="end"
-                  aria-label="account of current user"
-                  aria-controls={menuId}
-                  aria-haspopup="true"
-                  onClick={this.handleProfileMenuOpen}
-                  color="inherit"
-                >
-                  <AccountCircle />
-                </IconButton>,
-              ]}
+                    <Typography
+                      variant="h6"
+                      noWrap
+                      component="div"
+                      sx={{
+                        display: {
+                          xs: 'none',
+                          sm: 'block',
+                        },
+                      }}
+                    >
+                      Sign In
+                    </Typography>
+                  </Button>
+                </>
+              )}
             </Box>
             <Box
               sx={{

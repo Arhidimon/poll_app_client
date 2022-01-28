@@ -5,27 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { SnackbarProvider } from 'notistack';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-declare module '@mui/material/styles' {
-  interface Theme {
-    status: {
-      danger: string;
-    };
-  }
-  // allow configuration using `createTheme`
-  interface ThemeOptions {
-    status?: {
-      danger?: string;
-    };
-  }
-}
-
-export const theme = createTheme({
-  status: {
-    // danger: orange[500],
-  },
-});
+import { ThemeProvider } from '@mui/material/styles';
+import { theme } from './theme';
 
 ReactDOM.render(
   <React.StrictMode>

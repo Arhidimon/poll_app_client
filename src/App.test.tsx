@@ -4,7 +4,7 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { SnackbarProvider } from 'notistack';
 import { ThemeProvider } from '@mui/material/styles';
-import { theme } from './index';
+import { theme } from './theme';
 
 test('renders learn react link', () => {
   render(
