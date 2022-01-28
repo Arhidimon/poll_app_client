@@ -7,7 +7,6 @@ import './App.css';
 import { Box, Container, Typography } from '@mui/material';
 import PageNotFound from './PageNotFound/PageNotFound';
 import NewPoll from './Polls/NewPoll';
-import LoginDialog from './common/components/AuthDialog';
 import IUser from './common/interfaces/IUser';
 import { AuthContext } from './common/AuthContext';
 

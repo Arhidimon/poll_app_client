@@ -21,7 +21,7 @@ declare module '@mui/material/styles' {
   }
 }
 
-const theme = createTheme({
+export const theme = createTheme({
   status: {
     // danger: orange[500],
   },

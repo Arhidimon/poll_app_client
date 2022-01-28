@@ -1,50 +1,14 @@
-// import {
-//   TextField,
-//   Button,
-//   Checkbox,
-//   Typography,
-//   FormControlLabel,
-//   withStyles,
-// } from '@mui/material/';
-
 import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogActions from '@mui/material/DialogActions';
-import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
-import Typography from '@mui/material/Typography';
 import React from 'react';
-import { AnyNsRecord } from 'dns';
-import { isReturnStatement } from 'typescript';
 
 import { AuthContext } from '../AuthContext';
 import { Checkbox } from '@mui/material';
-
-const styles = (theme: any) => ({
-  forgotPassword: {
-    marginTop: theme.spacing(2),
-    color: theme.palette.primary.main,
-    cursor: 'pointer',
-    '&:enabled:hover': {
-      color: theme.palette.primary.dark,
-    },
-    '&:enabled:focus': {
-      color: theme.palette.primary.dark,
-    },
-  },
-  disabledText: {
-    cursor: 'auto',
-    color: theme.palette.text.disabled,
-  },
-  formControlLabel: {
-    marginRight: 0,
-  },
-});
 
 export enum DialogMode {
   SignIn,
@@ -133,7 +97,7 @@ class AuthDialog extends React.Component<any, ILoginDialogState> {
       localStorage.setItem('username', this.state.login.value);
       localStorage.setItem('user', JSON.stringify(json));
     } else {
-      alert('SigIn error: ' + response.status);
+      alert('SignIn error: ' + response.status);
     }
     this.props.onClose();
   };

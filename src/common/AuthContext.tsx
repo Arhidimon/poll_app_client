@@ -8,6 +8,6 @@ export interface IAuthContext {
 
 export const AuthContext = React.createContext<IAuthContext>({
   user: null,
-  signin: (login: string) => null,
+  signin: () => null,
   signout: () => null,
 });

@@ -2,12 +2,7 @@
 import HowToVoteIcon from '@mui/icons-material/HowToVote';
 import LinkIcon from '@mui/icons-material/Link';
 import { Button, Paper } from '@mui/material';
-import {
-  DataGrid,
-  GridColDef,
-  GridRowId,
-  GridRowsProp,
-} from '@mui/x-data-grid';
+import { DataGrid, GridColDef, GridRowId } from '@mui/x-data-grid';
 import { withSnackbar } from 'notistack';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -24,13 +19,6 @@ interface IState {
     options: string[];
   }[];
 }
-
-const rows: GridRowsProp = [
-  { id: 2, name: 'Hello', votes: 123 },
-  { id: 7, name: 'Helloa', votes: 22 },
-  { id: 8, name: 'DataGridPro', votes: 3 },
-  { id: 9, name: 'MUI', votes: 42 },
-];
 
 class Polls extends React.Component<any, IState> {
   //

@@ -6,7 +6,7 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import { Routes, Route, useParams, Navigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import React from 'react';
 
 class NewPoll extends React.Component<any, any> {

@@ -21,11 +21,10 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { alpha, styled, useTheme } from '@mui/material/styles';
+import { alpha, styled } from '@mui/material/styles';
 import PollIcon from '@mui/icons-material/Poll';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { withStyles } from '@mui/styles';
 import { withTheme } from '@mui/styles';
 
 import * as React from 'react';
@@ -477,7 +476,7 @@ class AppBarWithSearchAndDrawer extends React.Component<
         >
           <DrawerHeader>
             <IconButton onClick={this.handleDrawerClose}>
-              {this.props.theme.direction === 'ltr' ? (
+              {this.props.theme && this.props.theme.direction === 'ltr' ? (
                 <ChevronLeftIcon />
               ) : (
                 <ChevronRightIcon />
