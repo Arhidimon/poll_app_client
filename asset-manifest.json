@@ -1,22 +1,15 @@
 {
   "files": {
-    "main.css": "/poll_app_client/static/css/main.17fe1d63.chunk.css",
-    "main.js": "/poll_app_client/static/js/main.0b97763f.chunk.js",
-    "main.js.map": "/poll_app_client/static/js/main.0b97763f.chunk.js.map",
-    "runtime-main.js": "/poll_app_client/static/js/runtime-main.c2153738.js",
-    "runtime-main.js.map": "/poll_app_client/static/js/runtime-main.c2153738.js.map",
-    "static/js/2.118712f0.chunk.js": "/poll_app_client/static/js/2.118712f0.chunk.js",
-    "static/js/2.118712f0.chunk.js.map": "/poll_app_client/static/js/2.118712f0.chunk.js.map",
-    "static/js/3.94bc4fca.chunk.js": "/poll_app_client/static/js/3.94bc4fca.chunk.js",
-    "static/js/3.94bc4fca.chunk.js.map": "/poll_app_client/static/js/3.94bc4fca.chunk.js.map",
+    "main.css": "/poll_app_client/static/css/main.1338331c.css",
+    "main.js": "/poll_app_client/static/js/main.259da6c1.js",
+    "static/js/787.44e022fc.chunk.js": "/poll_app_client/static/js/787.44e022fc.chunk.js",
     "index.html": "/poll_app_client/index.html",
-    "static/css/main.17fe1d63.chunk.css.map": "/poll_app_client/static/css/main.17fe1d63.chunk.css.map",
-    "static/js/2.118712f0.chunk.js.LICENSE.txt": "/poll_app_client/static/js/2.118712f0.chunk.js.LICENSE.txt"
+    "main.1338331c.css.map": "/poll_app_client/static/css/main.1338331c.css.map",
+    "main.259da6c1.js.map": "/poll_app_client/static/js/main.259da6c1.js.map",
+    "787.44e022fc.chunk.js.map": "/poll_app_client/static/js/787.44e022fc.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.c2153738.js",
-    "static/js/2.118712f0.chunk.js",
-    "static/css/main.17fe1d63.chunk.css",
-    "static/js/main.0b97763f.chunk.js"
+    "static/css/main.1338331c.css",
+    "static/js/main.259da6c1.js"
   ]
 }
