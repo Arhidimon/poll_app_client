@@ -81,7 +81,7 @@ class Polls extends React.Component<any, IState> {
   static contextType = AuthContext;
 
   async componentDidMount() {
-    const response = await fetch('http://localhost:3000/api/polls');
+    const response = await fetch(`${process.env.HOST}/api/polls`);
     if (response.ok) {
       const json = await response.json();
       this.setState({

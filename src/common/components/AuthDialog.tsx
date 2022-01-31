@@ -79,7 +79,7 @@ class AuthDialog extends React.Component<any, ILoginDialogState> {
   };
 
   onSignInClick = async () => {
-    const response = await fetch('http://localhost:3000/api/auth/login', {
+    const response = await fetch(`${process.env.HOST}/api/auth/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -111,7 +111,7 @@ class AuthDialog extends React.Component<any, ILoginDialogState> {
   };
 
   onSignUpSubmit = async () => {
-    const response = await fetch('http://localhost:3000/api/auth/register', {
+    const response = await fetch(`${process.env.HOST}/api/auth/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

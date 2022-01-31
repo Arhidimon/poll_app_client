@@ -94,7 +94,7 @@ class Poll extends React.Component<IProps, IState> {
       return;
     }
     const response = await fetch(
-      `http://localhost:3000/api/polls/${this.id}/vote`,
+      `${process.env.HOST}/api/polls/${this.id}/vote`,
       {
         method: 'POST',
         headers,
@@ -126,7 +126,7 @@ class Poll extends React.Component<IProps, IState> {
       headers.Authorization = `Bearer ${token}`;
     }
     console.log(`headers ${JSON.stringify(headers)}`);
-    const response = await fetch(`http://localhost:3000/api/polls/${this.id}`, {
+    const response = await fetch(`${process.env.HOST}/api/polls/${this.id}`, {
       method: 'GET',
       headers,
     });
