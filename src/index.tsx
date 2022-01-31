@@ -7,7 +7,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { SnackbarProvider } from 'notistack';
 import { ThemeProvider } from '@mui/material/styles';
 import { theme } from './theme';
-import 'dotenv/config';
 
 ReactDOM.render(
   <React.StrictMode>

@@ -31,7 +31,7 @@ class NewPoll extends React.Component<any, any> {
       headers.Authorization = `Bearer ${token}`;
     }
 
-    const response = await fetch(`${process.env.HOST}/api/polls`, {
+    const response = await fetch(`${process.env.REACT_APP_HOST}/api/polls`, {
       method: 'POST',
       headers,
       body: JSON.stringify({

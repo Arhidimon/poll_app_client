@@ -79,16 +79,19 @@ class AuthDialog extends React.Component<any, ILoginDialogState> {
   };
 
   onSignInClick = async () => {
-    const response = await fetch(`${process.env.HOST}/api/auth/login`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
+    const response = await fetch(
+      `${process.env.REACT_APP_HOST}/api/auth/login`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username: this.state.login.value,
+          password: this.state.password.value,
+        }),
       },
-      body: JSON.stringify({
-        username: this.state.login.value,
-        password: this.state.password.value,
-      }),
-    });
+    );
     if (response.ok) {
       const json = await response.json();
       console.log('SignIn');
@@ -111,17 +114,20 @@ class AuthDialog extends React.Component<any, ILoginDialogState> {
   };
 
   onSignUpSubmit = async () => {
-    const response = await fetch(`${process.env.HOST}/api/auth/register`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
+    const response = await fetch(
+      `${process.env.REACT_APP_HOST}/api/auth/register`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username: this.state.login.value,
+          password: this.state.password.value,
+          email: this.state.email.value,
+        }),
       },
-      body: JSON.stringify({
-        username: this.state.login.value,
-        password: this.state.password.value,
-        email: this.state.email.value,
-      }),
-    });
+    );
     if (response.ok) {
       const json = await response.json();
       console.log('SignUp');
