@@ -10,7 +10,7 @@ import { theme } from './theme';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.REACT_APP_BASE_URL}>
       <ThemeProvider theme={theme}>
         <SnackbarProvider>
           <App />
